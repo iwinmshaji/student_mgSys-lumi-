@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Iwin",
+      "age": 21,
+      "course": "BSc Computer Science",
+      "email": "iwinms@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Abhi",
+      "age": 20,
+      "course": "BSc Computer Science",
+      "email": "abhi@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "Vishnu",
+      "age": "22",
+      "course": "Bsc  Computer Science",
+      "email": "vishnu@gmail.com"
+    },
+    {
+      "id": "5",
+      "name": "Shybin",
+      "age": "23",
+      "course": "Bsc  Computer Science",
+      "email": "shybin@gmail.com"
+    }
+  ]
+}
