@@ -39,6 +39,9 @@ function App() {
       email: email
     };
 
+
+
+
     axios.post(API_URL, newStudent)
       .then(() => {
         getStudents();
@@ -51,6 +54,10 @@ function App() {
 
   };
 
+
+
+
+
   const deleteStudent = (id) => {
 
     axios.delete(API_URL + "/" + id)
@@ -59,6 +66,12 @@ function App() {
       });
 
   };
+
+
+
+
+
+
 
   return (
     <div className="container">
@@ -74,40 +87,38 @@ function App() {
           onChange={(e) => setId(e.target.value)}
         />
 
-        <input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+              <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+               />
 
-        <input
+         <input
           type="number"
           placeholder="Age"
           value={age}
           onChange={(e) => setAge(e.target.value)}
-        />
+         />
 
         <input
           type="text"
           placeholder="Course"
           value={course}
           onChange={(e) => setCourse(e.target.value)}
-        />
+         />
 
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-        />
+         />
 
         <button type="submit">Add Student</button>
 
       </form>
-
       <table>
-
         <thead>
 
           <tr>
@@ -120,10 +131,13 @@ function App() {
           </tr>
 
         </thead>
-
         <tbody>
 
-          {students.map((student) => (
+
+
+
+
+  {students.map((student) => (
 
             <tr key={student.id}>
               <td>{student.id}</td>
@@ -133,23 +147,19 @@ function App() {
               <td>{student.email}</td>
               <td>
 
+
+
                 <button onClick={() => deleteStudent(student.id)}>
                   Delete
                 </button>
+                </td>
+                </tr>
 
-              </td>
+))}
 
-            </tr>
-
-          ))}
-
-        </tbody>
-
-      </table>
-
-    </div>
+</tbody>
+</table>
+</div>
   );
-
 }
-
 export default App;
